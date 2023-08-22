@@ -1,0 +1,14 @@
+-- Считаем, что имя таблицы "employees"
+SELECT surname
+FROM employees
+ORDER BY experience DESC
+LIMIT 1 OFFSET 1;
+
+
+
+-- Если limit не поддерживается, например SQLServer, то можно решить так
+--SELECT surname
+--FROM employees
+--ORDER BY experience DESC
+--OFFSET 1 ROW
+--FETCH NEXT 1 ROW ONLY;
